@@ -71,7 +71,7 @@ nav a.active{
 }
 
 .hero-name{
-  font-size: clamp(26px, 2.6vw, 38px);
+  font-size: clamp(30px, 3vw, 44px);
   font-weight: 600;
   letter-spacing: 0.03em;
   color: rgba(255,255,255,0.9);
@@ -79,7 +79,7 @@ nav a.active{
 }
 
 .hero-desc{
-  font-size: 1.05rem;
+  font-size: 3rem;
   max-width: 560px;
   color: rgba(255,255,255,0.75);
   margin: 0 0 14px;
