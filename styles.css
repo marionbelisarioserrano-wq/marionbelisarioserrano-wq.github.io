@@ -131,7 +131,7 @@ nav a.active{
 /* IMAGE CARD */
 .hero-image{
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -148,9 +148,8 @@ nav a.active{
 /* RESPONSIVE */
 @media (max-width: 900px){
   .hero{
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding-top: 28px;
+    .hero{
+  grid-template-columns: 0.9fr 1.1fr;
   }
   .hero-image{
     aspect-ratio: 16/10;
