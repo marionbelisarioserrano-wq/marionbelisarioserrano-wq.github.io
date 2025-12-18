@@ -79,14 +79,14 @@ nav a.active{
 }
 
 .hero-desc{
-  font-size: 3rem;
+  font-size: 1.15rem;
   max-width: 560px;
   color: rgba(255,255,255,0.75);
   margin: 0 0 14px;
 }
 
 .hero-meta{
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.6);
   margin: 0 0 28px;
 }
