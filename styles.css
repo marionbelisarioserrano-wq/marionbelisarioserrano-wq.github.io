@@ -79,10 +79,11 @@ nav a.active{
 }
 
 .hero-desc{
-  font-size: 1.15rem;
-  max-width: 560px;
-  color: rgba(255,255,255,0.75);
-  margin: 0 0 14px;
+  font-size: 1.22rem;          /* un pelín más grande */
+  max-width: 580px;
+  color: rgba(255,255,255,0.78);
+  margin: 12px 0 18px;         /* BAJA el bloque */
+  line-height: 1.55;
 }
 
 .hero-meta{
