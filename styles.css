@@ -405,29 +405,29 @@ nav a.active{
 }
 
 .story-title{
+  .story-title{
   font-size: clamp(92px, 7.4vw, 148px);
-  line-height: 0.90;
+  line-height: 0.92;          /* antes 0.90 → más aire */
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin: 0 0 18px;
+  margin: 0 0 24px;           /* más separación con el texto */
   color: rgba(255,255,255,0.96);
-    white-space: normal;
-  word-break: keep-all;
 }
 
 .story-lead{
-  margin: 0 0 24px;
-  max-width: 72ch;
-  font-size: 1.28rem;
+.story-lead{
+  margin: 0 0 28px;          /* más aire antes de los CTAs */
+  max-width: 70ch;
+  font-size: 1.32rem;        /* antes 1.28 → un poco más cuerpo */
   line-height: 1.6;
   color: rgba(255,255,255,0.78);
 }
 
 .story-actions{
   display:flex;
-  gap: 16px;
+  gap: 18px;        /* un poco más de separación */
   flex-wrap:wrap;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .story-divider{
