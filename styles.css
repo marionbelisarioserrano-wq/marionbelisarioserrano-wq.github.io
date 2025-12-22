@@ -411,6 +411,8 @@ nav a.active{
   letter-spacing: -0.03em;
   margin: 0 0 18px;
   color: rgba(255,255,255,0.96);
+    white-space: normal;
+  word-break: keep-all;
 }
 
 .story-lead{
