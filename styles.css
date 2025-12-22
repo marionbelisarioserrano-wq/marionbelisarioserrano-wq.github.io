@@ -395,3 +395,93 @@ nav a.active{
     margin: 48px 0 36px;
   }
 }
+/* ======================
+   STORY PAGE (matches Home vibe)
+====================== */
+
+.story-hero{
+  max-width: 980px;
+  margin: 10px auto 10px;
+}
+
+.story-title{
+  font-size: clamp(64px, 6vw, 110px);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: rgba(255,255,255,0.95);
+}
+
+.story-lead{
+  margin: 0 0 18px;
+  max-width: 70ch;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.78);
+}
+
+.story-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap:wrap;
+  margin-top: 10px;
+}
+
+.story-layout{
+  margin-top: 38px;
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.story-photo{
+  border-radius: 24px;
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+
+.story-photo img{
+  width:100%;
+  height: auto;
+  display:block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.story-content{
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+}
+
+.story-cards{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.story-text h2{
+  margin: 0 0 10px;
+  font-size: clamp(28px, 2.6vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.story-text p{
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.80);
+  font-size: 1.07rem;
+  line-height: 1.75;
+  max-width: 72ch;
+}
+
+@media (max-width: 900px){
+  .story-layout{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
