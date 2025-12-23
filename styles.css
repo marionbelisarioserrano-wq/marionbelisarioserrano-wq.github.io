@@ -188,9 +188,14 @@ nav a.active{
 /* ======================
    STORY
 ====================== */
-.story-hero{
-  max-width: 1100px;
+
+.story-hero-grid{
+  max-width: 1280px;
   margin: 12px auto 0;
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: start;
 }
 
 .story-title{
@@ -213,34 +218,20 @@ nav a.active{
   display:flex;
   gap:18px;
   flex-wrap:wrap;
+  margin: 0 0 18px;
 }
 
-/* SPLIT: cards left + photo right */
-.story-split{
-  max-width: 1100px;
-  margin: 34px auto 0;
-  display:grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 52px;
-  align-items: start;
+.story-caption{
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.55);
 }
 
-/* LEFT cards - stronger presence */
-.story-cards-strong{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.story-card-strong{
-  padding: 20px;
-}
-
-/* RIGHT photo - controlled, not huge */
-.story-photo-right img{
+/* Hero photo (no gigante, premium) */
+.story-hero-photo img{
   width: 100%;
   aspect-ratio: 4 / 5;
-  max-height: 520px;
+  max-height: 540px;
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.14);
   object-fit: cover;
@@ -249,15 +240,22 @@ nav a.active{
   display:block;
 }
 
-.story-caption{
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.55);
+/* Cards */
+.story-cards-strong{
+  max-width: 1280px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-/* MY STORY box - more readable + punch */
+.story-card-strong{
+  padding: 20px;
+}
+
+/* My story box */
 .story-box{
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 26px;
   border-radius: 18px;
@@ -299,6 +297,7 @@ nav a.active{
   color: rgba(255,255,255,0.92);
 }
 
+/* CTA (sin solapes) */
 .story-cta{
   margin-top: 18px;
   display:flex;
@@ -327,17 +326,21 @@ nav a.active{
   font-size: 0.98rem;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 900px){
-  .story-split{
+  .story-hero-grid{
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
   }
 
-  .story-photo-right img{
+  .story-hero-photo img{
     aspect-ratio: 16/10;
     max-height: none;
     border-radius: 16px;
+  }
+
+  .story-cards-strong{
+    grid-template-columns: 1fr;
   }
 
   .story-cta{
