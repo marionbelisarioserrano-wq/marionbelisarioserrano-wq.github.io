@@ -197,7 +197,7 @@ nav a.active{
 /* Proof chips row on home */
 .proof{
   max-width: 1280px;
-  margin: -20px auto 0; /* más arriba */
+  margin: -32px auto 0; /* más arriba */
   padding: 0 32px 18px;
 }
 .proof-row{
