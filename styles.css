@@ -186,7 +186,7 @@ nav a.active{
 }
 
 /* ======================
-   STORY
+   STORY (Punchy)
 ====================== */
 
 .story-hero-grid{
@@ -199,19 +199,19 @@ nav a.active{
 }
 
 .story-title{
-  font-size: clamp(72px, 6.5vw, 120px);
-  line-height: 0.94;
+  font-size: clamp(74px, 6.8vw, 130px);
+  line-height: 0.92;
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
 }
 
 .story-lead{
-  max-width: 70ch;
-  font-size: 1.3rem;
+  max-width: 66ch;
+  font-size: 1.28rem;
   line-height: 1.6;
   color: rgba(255,255,255,0.78);
-  margin: 0 0 24px;
+  margin: 0 0 22px;
 }
 
 .story-actions{
@@ -227,11 +227,11 @@ nav a.active{
   color: rgba(255,255,255,0.55);
 }
 
-/* Hero photo (no gigante, premium) */
+/* Hero photo — a bit more elongated */
 .story-hero-photo img{
   width: 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 540px;
+  aspect-ratio: 4 / 6;     /* MÁS ALARGADA */
+  max-height: 620px;
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.14);
   object-fit: cover;
@@ -240,8 +240,8 @@ nav a.active{
   display:block;
 }
 
-/* Cards */
-.story-cards-strong{
+/* Impact cards (visual punch) */
+.story-impact{
   max-width: 1280px;
   margin: 0 auto;
   display:grid;
@@ -249,11 +249,43 @@ nav a.active{
   gap: 18px;
 }
 
-.story-card-strong{
-  padding: 20px;
+.impact-card{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  padding: 18px;
+  display:flex;
+  gap: 14px;
+  min-height: 180px;
 }
 
-/* My story box */
+.impact-num{
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.95rem;
+  padding-top: 2px;
+  min-width: 34px;
+}
+
+.impact-title{
+  font-weight: 650;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 8px;
+}
+
+.impact-text{
+  color: rgba(255,255,255,0.78);
+  line-height: 1.65;
+}
+
+.impact-tags{
+  margin-top: 12px;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.92rem;
+}
+
+/* Story box */
 .story-box{
   max-width: 1280px;
   margin: 0 auto;
@@ -263,7 +295,14 @@ nav a.active{
   background: rgba(255,255,255,0.06);
 }
 
-.story-box h2{
+.story-box-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items:start;
+}
+
+.story-h2{
   margin: 0 0 14px;
   font-size: clamp(30px, 3vw, 46px);
   line-height: 1.08;
@@ -278,26 +317,39 @@ nav a.active{
   max-width: 74ch;
 }
 
-.story-bullets{
-  margin: 16px 0 18px;
+/* Side cards */
+.story-side{
   display:grid;
-  gap: 10px;
-  padding: 14px;
-  border-radius: 14px;
+  gap: 12px;
+}
+
+.story-side-card{
+  padding: 16px;
+  border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.05);
 }
 
-.story-bullet{
-  color: rgba(255,255,255,0.78);
-  line-height: 1.55;
+.side-kicker{
+  font-size: 0.86rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.60);
+  margin-bottom: 10px;
 }
 
-.story-bullet strong{
+.side-list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7;
+}
+
+.side-list strong{
   color: rgba(255,255,255,0.92);
 }
 
-/* CTA (sin solapes) */
+/* CTA */
 .story-cta{
   margin-top: 18px;
   display:flex;
@@ -339,7 +391,11 @@ nav a.active{
     border-radius: 16px;
   }
 
-  .story-cards-strong{
+  .story-impact{
+    grid-template-columns: 1fr;
+  }
+
+  .story-box-grid{
     grid-template-columns: 1fr;
   }
 
