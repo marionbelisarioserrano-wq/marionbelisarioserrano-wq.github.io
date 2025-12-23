@@ -277,3 +277,200 @@ nav a.active{
     align-items: flex-start;
   }
 }
+/* =========================
+   STORY — CLEAN HERO (PHOTO RIGHT)
+========================= */
+
+.story-hero{
+  max-width: 1180px;
+  margin: 0 auto 44px;
+}
+
+.story-hero-grid{
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 42px;
+  align-items:start;
+}
+
+.story-title{
+  font-size: clamp(70px, 6.2vw, 132px);
+  line-height: 0.92;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+  color: rgba(255,255,255,0.96);
+}
+
+.story-lead{
+  margin: 0 0 10px;
+  max-width: 72ch;
+  font-size: 1.28rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.78);
+}
+
+.story-actions{
+  display:flex;
+  gap: 16px;
+  flex-wrap:wrap;
+  margin-top: 18px;
+}
+
+.story-hero-photo{
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.55);
+  overflow:hidden;
+}
+
+.story-hero-photo img{
+  width:100%;
+  aspect-ratio: 4 / 5;
+  max-height: 520px;
+  display:block;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.story-caption{
+  margin: 10px 0 0;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.95rem;
+}
+
+/* 01/02/03 cards already exist if you use impact styles; ensure spacing is punchy */
+.story-impact{
+  max-width: 1180px;
+  margin: 0 auto 54px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.impact-card{
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  padding: 18px;
+  display:flex;
+  flex-direction:column;
+  min-height: 210px;
+}
+
+.impact-num{
+  font-size: 0.9rem;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 8px;
+}
+
+.impact-title{
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.impact-text{
+  margin: 0 0 10px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.impact-tags{
+  margin-top:auto;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Boxes layout */
+.story-boxes{
+  max-width: 1180px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.story-box{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  padding: 18px;
+}
+
+.story-box h2{
+  margin: 0 0 10px;
+  font-size: clamp(26px, 2.4vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.story-box p{
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.80);
+  font-size: 1.07rem;
+  line-height: 1.75;
+  max-width: 74ch;
+}
+
+.story-box ul{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.80);
+  line-height: 1.7;
+}
+
+.story-box li{ margin: 8px 0; }
+
+.story-cta{
+  margin-top: 14px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+}
+
+.story-cta-title{
+  font-weight: 650;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 4px;
+}
+
+.story-cta-sub{
+  color: rgba(255,255,255,0.60);
+  font-size: 0.98rem;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .story-hero-grid{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .story-title{
+    font-size: clamp(54px, 10vw, 84px);
+    line-height: 0.92;
+  }
+
+  .story-hero-photo img{
+    aspect-ratio: 16 / 10;
+    max-height: none;
+  }
+
+  .story-impact{
+    grid-template-columns: 1fr;
+  }
+
+  .story-cta{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+}
