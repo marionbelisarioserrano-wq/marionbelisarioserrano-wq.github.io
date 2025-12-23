@@ -490,6 +490,7 @@ nav a.active{
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+   margin-bottom: 18px;
 }
 
 .story-box h2{
