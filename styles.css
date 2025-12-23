@@ -215,25 +215,38 @@ nav a.active{
   flex-wrap:wrap;
 }
 
-/* GRID */
-.story-grid{
+/* SPLIT: cards left + photo right */
+.story-split{
   max-width: 1100px;
-  margin: 40px auto 0;
+  margin: 34px auto 0;
   display:grid;
-  grid-template-columns: 340px 1fr;
-  gap: 56px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 52px;
+  align-items: start;
 }
 
-/* PHOTO (CONTROLLED SIZE) */
-.story-photo img{
+/* LEFT cards - stronger presence */
+.story-cards-strong{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.story-card-strong{
+  padding: 20px;
+}
+
+/* RIGHT photo - controlled, not huge */
+.story-photo-right img{
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-height: 340px;
-  border-radius: 20px;
+  aspect-ratio: 4 / 5;
+  max-height: 520px;
+  border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.14);
   object-fit: cover;
   object-position: center 25%;
   box-shadow: 0 16px 45px rgba(0,0,0,0.55);
+  display:block;
 }
 
 .story-caption{
@@ -242,16 +255,11 @@ nav a.active{
   color: rgba(255,255,255,0.55);
 }
 
-/* RIGHT COLUMN */
-.story-right{
-  display:flex;
-  flex-direction:column;
-  gap: 28px;
-}
-
-/* STORY BOX */
+/* MY STORY box - more readable + punch */
 .story-box{
-  padding: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.06);
@@ -261,43 +269,79 @@ nav a.active{
   margin: 0 0 14px;
   font-size: clamp(30px, 3vw, 46px);
   line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
-.story-box p{
+.story-par{
   margin: 0 0 14px;
   font-size: 1.08rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.80);
-  max-width: 72ch;
+  color: rgba(255,255,255,0.82);
+  max-width: 74ch;
 }
 
-/* ======================
-   RESPONSIVE
-====================== */
-@media (max-width: 900px){
-  nav{ padding: 14px 24px; }
+.story-bullets{
+  margin: 16px 0 18px;
+  display:grid;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+}
 
-  .hero{
+.story-bullet{
+  color: rgba(255,255,255,0.78);
+  line-height: 1.55;
+}
+
+.story-bullet strong{
+  color: rgba(255,255,255,0.92);
+}
+
+.story-cta{
+  margin-top: 18px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+}
+
+.story-cta-copy{
+  display:flex;
+  flex-direction:column;
+  gap: 4px;
+}
+
+.story-cta-title{
+  font-weight: 650;
+  color: rgba(255,255,255,0.92);
+}
+
+.story-cta-sub{
+  color: rgba(255,255,255,0.60);
+  font-size: 0.98rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .story-split{
     grid-template-columns: 1fr;
     gap: 24px;
-    padding: 24px;
-    min-height: auto;
   }
 
-  .hero-image{
+  .story-photo-right img{
     aspect-ratio: 16/10;
+    max-height: none;
     border-radius: 16px;
   }
 
-  .page{ padding: 40px 24px; }
-
-  .story-grid{
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .story-photo img{
-    aspect-ratio: 16/10;
-    max-height: none;
+  .story-cta{
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
