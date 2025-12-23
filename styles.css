@@ -196,14 +196,12 @@ nav a.active{
   margin: -24px auto 0;
   padding: 0 32px 18px;
 }
-
 .proof-row{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
   align-items:center;
   justify-content: flex-start;
-
 }
 
 .pill{
