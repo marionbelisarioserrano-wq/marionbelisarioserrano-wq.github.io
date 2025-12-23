@@ -632,3 +632,49 @@ nav a.active{
 
   .simple{ padding: 56px 24px; }
 }
+/* =========================
+   STORY — LOWER LAYOUT FIX
+========================= */
+
+.story-lower{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+/* Columna izquierda */
+.story-main{
+  margin-top: 0;
+}
+
+/* Columna derecha */
+.story-side{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Más aire entre bloques */
+.story-outcomes{
+  margin-top: 12px;
+}
+
+/* CTA alineado con My story */
+.story-cta-wide{
+  grid-column: 1;
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .story-lower{
+    grid-template-columns: 1fr;
+  }
+
+  .story-cta-wide{
+    grid-column: auto;
+  }
+}
