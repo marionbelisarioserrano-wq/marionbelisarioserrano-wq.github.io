@@ -67,9 +67,7 @@ nav a.active{
   padding: 72px 32px;
 }
 
-.section{
-  margin-top: 72px;
-}
+.section{ margin-top: 72px; }
 
 .kicker{
   margin: 0 0 18px;
@@ -87,7 +85,7 @@ nav a.active{
 }
 
 /* ======================
-   HERO
+   HERO (HOME)
 ====================== */
 .hero{
   max-width:1280px;
@@ -188,182 +186,89 @@ nav a.active{
 }
 
 /* ======================
-   PROOF STRIP
+   STORY
 ====================== */
-.proof{
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 32px 18px;
+.story-hero{
+  max-width: 1100px;
+  margin: 12px auto 0;
 }
 
-.proof-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.pill{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.86);
-  font-size: 0.95rem;
-}
-
-/* ======================
-   TESTIMONIALS (GRID 4)
-====================== */
-.grid-4{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.tcard{
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 18px;
-  padding: 18px;
-  min-height: 260px;
-  display:flex;
-  flex-direction:column;
-}
-
-.tstars{
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  letter-spacing: 0.25em;
-  color: rgba(255,255,255,0.8);
-}
-
-.ttext{
-  margin: 0 0 12px;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.65;
-  font-size: 0.98rem;
-}
-
-.tauthor{
-  margin-top:auto;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-.tname{
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: rgba(255,255,255,0.92);
-}
-
-.trole{
-  margin-top: 6px;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.60);
-}
-
-/* COMING SOON */
-.tcard-soon{
-  background: rgba(255,255,255,0.05);
-}
-
-.tsoon{
-  height: 100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap: 6px;
-  color: rgba(255,255,255,0.7);
-}
-
-.tsoon-title{
-  font-weight: 600;
-}
-
-.tsoon-sub{
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.55);
-}
-
-/* ======================
-   STATEMENT
-====================== */
-.quote{
-  text-align:center;
-  margin: 84px 0 64px;
-}
-
-.quote-hero{
-  margin: 0 auto;
-  max-width: 980px;
-  font-size: clamp(64px, 6vw, 110px);
-  line-height: 0.95;
+.story-title{
+  font-size: clamp(72px, 6.5vw, 120px);
+  line-height: 0.94;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: rgba(255,255,255,0.95);
+  letter-spacing: -0.03em;
+  margin: 0 0 22px;
 }
 
-/* ======================
-   GRID 3 (CARDS)
-====================== */
-.grid-3{
+.story-lead{
+  max-width: 70ch;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.78);
+  margin: 0 0 24px;
+}
+
+.story-actions{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* GRID */
+.story-grid{
+  max-width: 1100px;
+  margin: 40px auto 0;
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 340px 1fr;
+  gap: 56px;
 }
 
-.card{
-  background: var(--card);
+/* PHOTO (CONTROLLED SIZE) */
+.story-photo img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 340px;
+  border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 18px;
-  padding: 18px;
+  object-fit: cover;
+  object-position: center 25%;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.55);
 }
 
-.card h3{
-  margin: 0 0 8px;
-  font-size: 1.15rem;
-}
-
-.card p{
-  margin: 0;
-  color: rgba(255,255,255,0.76);
-  line-height: 1.65;
-}
-
-.card small{
-  display:block;
+.story-caption{
   margin-top: 10px;
+  font-size: 0.95rem;
   color: rgba(255,255,255,0.55);
 }
 
-/* ======================
-   FEATURED
-====================== */
-.featured{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+/* RIGHT COLUMN */
+.story-right{
+  display:flex;
+  flex-direction:column;
+  gap: 28px;
 }
 
-.featured a{
-  text-decoration:none;
-  color: rgba(255,255,255,0.9);
+/* STORY BOX */
+.story-box{
+  padding: 22px;
+  border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.06);
-  border-radius: 14px;
-  padding: 14px 16px;
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
 }
 
-.featured a:hover{
-  background: rgba(255,255,255,0.08);
+.story-box h2{
+  margin: 0 0 14px;
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.08;
 }
 
-.featured span{
-  color: rgba(255,255,255,0.62);
-  font-size: 0.95rem;
+.story-box p{
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.80);
+  max-width: 72ch;
 }
 
 /* ======================
@@ -386,184 +291,13 @@ nav a.active{
 
   .page{ padding: 40px 24px; }
 
-  .grid-3,
-  .grid-4{
+  .story-grid{
     grid-template-columns: 1fr;
-  }
-
-  .quote{
-    margin: 48px 0 36px;
-  }
-}
-/* ======================
-   STORY — V2 (more punch, more spacing)
-====================== */
-
-.story-hero{
-  max-width: 1080px;
-  margin: 8px auto 0;
-}
-
-.story-title{
-  .story-title{
-  font-size: clamp(92px, 7.4vw, 148px);
-  line-height: 0.92;          /* antes 0.90 → más aire */
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin: 0 0 24px;           /* más separación con el texto */
-  color: rgba(255,255,255,0.96);
-}
-
-.story-lead{
-.story-lead{
-  margin: 0 0 28px;          /* más aire antes de los CTAs */
-  max-width: 70ch;
-  font-size: 1.32rem;        /* antes 1.28 → un poco más cuerpo */
-  line-height: 1.6;
-  color: rgba(255,255,255,0.78);
-}
-
-.story-actions{
-  display:flex;
-  gap: 18px;        /* un poco más de separación */
-  flex-wrap:wrap;
-  margin-top: 14px;
-}
-
-.story-divider{
-  margin: 44px 0 0;
-}
-
-.story-layout{
-  margin-top: 44px;
-  display: grid;
-  grid-template-columns: 420px 1fr;  /* columna fija para foto */
-  gap: 56px;
-  align-items: start;
-}
-
-/* Photo: smaller & more editorial */
-.story-photo{
-  justify-self: start;
-  max-width: 380px;        /* MÁS PEQUEÑA */
-}
-
-.story-photo img{
-  width: 100%;
-  aspect-ratio: 1 / 1;     /* CUADRADA (menos dominante) */
-  max-height: 380px;       /* LIMITA el tamaño */
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
-  box-shadow: 0 16px 45px rgba(0,0,0,0.55);
-  display: block;
-  object-fit: cover;
-  object-position: center 25%;
-  filter: saturate(0.95) contrast(1.02); /* toque editorial suave */
-}
-
-.story-photo-caption{
-  margin-top: 10px;
-  color: rgba(255,255,255,0.55);
-  font-size: 0.95rem;
-}
-
-/* Cards spacing */
-.story-cards{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-/* Text block */
-.story-h2{
-  margin: 0 0 14px;
-  font-size: clamp(34px, 3.1vw, 54px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-.story-text p{
-  margin: 0 0 14px;
-  color: rgba(255,255,255,0.82);
-  font-size: 1.08rem;
-  line-height: 1.78;
-  max-width: 74ch;
-}
-
-/* Highlight box to avoid “sosa” */
-.story-highlight{
-  margin-top: 18px;
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
-}
-
-.story-highlight h3{
-  margin: 0 0 10px;
-  font-size: 1.1rem;
-}
-
-.story-highlight ul{
-  margin: 0;
-  padding-left: 18px;
-  color: rgba(255,255,255,0.78);
-  line-height: 1.7;
-}
-
-.story-highlight li{
-  margin: 8px 0;
-}
-
-/* Bottom CTA strip */
-.story-cta{
-  margin-top: 18px;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.08);
-}
-
-.story-cta-title{
-  font-weight: 650;
-  color: rgba(255,255,255,0.92);
-  margin-bottom: 4px;
-}
-
-.story-cta-sub{
-  color: rgba(255,255,255,0.60);
-  font-size: 0.98rem;
-}
-
-/* Responsive */
-@media (max-width: 900px){
-  .story-title{
-    font-size: clamp(58px, 12vw, 88px);
-    line-height: 0.92;
-  }
-
-  .story-layout{
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
-
-  .story-photo{
-    max-width: 100%;
+    gap: 24px;
   }
 
   .story-photo img{
     aspect-ratio: 16/10;
     max-height: none;
-    border-radius: 16px;
-  }
-
-  .story-cta{
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
