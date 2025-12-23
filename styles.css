@@ -197,7 +197,7 @@ nav a.active{
 /* Proof chips row on home */
 .proof{
   max-width: 1280px;
-  margin: -22px auto 0;  /* sube las pills */
+  margin: -16px auto 0; /* 👈 sube las pills */
   padding: 0 32px 18px;
 }
 .proof-row{
