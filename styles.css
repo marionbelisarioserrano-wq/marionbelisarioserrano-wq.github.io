@@ -474,3 +474,90 @@ nav a.active{
     align-items:flex-start;
   }
 }
+/* =========================
+   STORY HERO — FORCE GRID
+========================= */
+
+.story-hero{
+  max-width: 1180px;
+  margin: 0 auto 64px;
+  padding-top: 24px;
+}
+
+.story-hero-grid{
+  display: grid !important;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.story-hero-left{
+  display: flex;
+  flex-direction: column;
+}
+
+.story-title{
+  font-size: clamp(72px, 6.5vw, 132px);
+  line-height: 0.92;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+}
+
+.story-lead{
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 70ch;
+  margin-bottom: 18px;
+  color: rgba(255,255,255,0.78);
+}
+
+.story-actions{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* PHOTO RIGHT — CONTROLLED */
+.story-hero-right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.story-hero-photo{
+  width: 100%;
+  max-width: 420px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.55);
+}
+
+.story-hero-photo img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.story-caption{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* MOBILE */
+@media (max-width: 900px){
+  .story-hero-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .story-hero-photo{
+    max-width: 100%;
+  }
+}
