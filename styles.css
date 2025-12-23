@@ -182,19 +182,18 @@ nav a.active{
   max-height: 620px; /* reduces “too big” feeling */
   align-self: start;
 }
-
 .hero-image img{
   width:100%;
   height:100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 35%;
   display:block;
 }
 
 /* Proof chips row on home */
 .proof{
   max-width: 1280px;
-  margin: 0 auto;
+  margin: -24px auto 0;
   padding: 0 32px 18px;
 }
 
@@ -203,6 +202,8 @@ nav a.active{
   flex-wrap:wrap;
   gap:12px;
   align-items:center;
+  justify-content: flex-start;
+
 }
 
 .pill{
