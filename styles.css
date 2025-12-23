@@ -445,33 +445,27 @@ nav a.active{
 /* Photo: smaller & more editorial */
 .story-photo{
   justify-self: start;
-  max-width: 520px;
+  max-width: 380px;        /* MÁS PEQUEÑA */
 }
 
 .story-photo img{
-  width:100%;
-  aspect-ratio: 4 / 5;
-  max-height: 640px;
-  border-radius: 24px;
-  overflow:hidden;
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* CUADRADA (menos dominante) */
+  max-height: 380px;       /* LIMITA el tamaño */
+  border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.06);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
-  display:block;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.55);
+  display: block;
   object-fit: cover;
   object-position: center 25%;
+  filter: saturate(0.95) contrast(1.02); /* toque editorial suave */
 }
 
 .story-photo-caption{
-  margin-top: 12px;
+  margin-top: 10px;
   color: rgba(255,255,255,0.55);
   font-size: 0.95rem;
-}
-
-.story-content{
-  display:flex;
-  flex-direction:column;
-  gap: 30px;
 }
 
 /* Cards spacing */
