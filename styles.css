@@ -436,8 +436,8 @@ nav a.active{
 
 .story-layout{
   margin-top: 44px;
-  display:grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  display: grid;
+  grid-template-columns: 420px 1fr;  /* columna fija para foto */
   gap: 56px;
   align-items: start;
 }
