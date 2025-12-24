@@ -19,8 +19,7 @@
   align-items:stretch;
 }
 
-/* ✅ para alinear la foto con el top del título
-   y el bottom con los botones */
+/* ✅ alinear foto con top del título y bottom con los botones */
 .story-hero-text{
   display:flex;
   flex-direction:column;
@@ -43,13 +42,17 @@
   margin:0 0 18px;
 }
 
-/* ✅ los botones bajan al fondo del bloque de texto
-   para que el borde inferior “case” con la foto */
+/* ✅ botones al fondo del bloque de texto */
 .story-actions{
   display:flex;
   gap:18px;
-  flex-wrap:wrap;     /* ✅ important para móvil */
-  margin-top:auto;    /* ✅ alinea con el bottom de la foto */
+  flex-wrap:wrap;
+  margin-top:auto;
+}
+
+/* ✅ aire extra debajo de los botones (antes del divider) */
+.story-hero{
+  padding-bottom:22px;
 }
 
 .story-photo{
@@ -69,11 +72,11 @@
 }
 
 /* =========================
-   DIVIDER
+   DIVIDER (entre hero y cards)
 ========================= */
 
 .story-divider{
-  margin:48px 0 36px;
+  margin:44px 0 38px; /* ✅ más separación real */
 }
 
 /* =========================
@@ -84,7 +87,7 @@
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
-  margin-bottom:36px;
+  margin:0; /* controlamos el espacio con el divider y el lower */
 }
 
 /* =========================
@@ -120,6 +123,7 @@
   font-size:.98rem;
   line-height:1.65;
   color:rgba(255,255,255,.78);
+  margin:0 0 12px;
 }
 
 .stags{
@@ -131,17 +135,23 @@
 }
 
 /* =========================
-   LOWER GRID (THE IMPORTANT PART)
+   LOWER GRID (final layout)
+   - main = ancho cards 1+2
+   - what/outcomes = ancho card 3
+   - curious = debajo de main (ancho cards 1+2)
+   - outcomes NO ocupa 2 filas (adiós hueco gigante)
 ========================= */
 
 .story-lower{
+  margin-top:18px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   grid-template-areas:
     "main main what"
     "main main outcomes"
-    "curious curious outcomes";
+    "curious curious .";
   gap:18px;
+  align-items:start;
 }
 
 /* AREAS */
@@ -175,21 +185,26 @@
   color:rgba(255,255,255,.8);
 }
 
+.story-box p{ margin:0 0 12px; }
+
 .story-box ul{
   margin:0;
   padding-left:18px;
 }
 
-/* CTA card */
+.story-box li{ margin:8px 0; }
+
+/* CTA card: ✅ botón alineado con el texto (no abajo del todo) */
 .story-curious{
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
+  justify-content:flex-start; /* ✅ */
+  gap:14px;                   /* ✅ */
 }
 
-/* ✅ botón a la derecha dentro de la card */
 .story-curious .btn{
-  align-self:flex-end;
+  align-self:flex-end; /* ✅ derecha */
+  margin-top:6px;      /* ✅ pegadito al texto */
 }
 
 /* =========================
@@ -202,18 +217,16 @@
   .story-hero{
     grid-template-columns:1fr;
     gap:22px;
+    padding-bottom:0;
   }
 
-  /* en móvil no queremos el “push” al fondo */
   .story-actions{ margin-top:18px; }
 
-  .story-photo{
-    max-height:520px;
-  }
+  .story-photo{ max-height:520px; }
 
-  .story-cards{
-    grid-template-columns:1fr;
-  }
+  .story-divider{ margin:28px 0 22px; }
+
+  .story-cards{ grid-template-columns:1fr; }
 
   .story-lower{
     grid-template-columns:1fr;
