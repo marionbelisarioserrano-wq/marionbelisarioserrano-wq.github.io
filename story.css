@@ -17,9 +17,9 @@
   grid-template-columns:1.05fr .95fr;
   gap:56px;
   align-items:stretch;
+  padding-bottom:22px; /* aire antes del divider */
 }
 
-/* ✅ alinear foto con top del título y bottom con los botones */
 .story-hero-text{
   display:flex;
   flex-direction:column;
@@ -28,7 +28,7 @@
 
 .story-title{
   font-size:clamp(64px,6.5vw,104px);
-  line-height:.95; /* compacta */
+  line-height:.95;
   font-weight:850;
   letter-spacing:-.03em;
   margin:0 0 16px;
@@ -42,17 +42,12 @@
   margin:0 0 18px;
 }
 
-/* ✅ botones al fondo del bloque de texto */
+/* botones alineados con el bottom de la foto */
 .story-actions{
   display:flex;
   gap:18px;
   flex-wrap:wrap;
   margin-top:auto;
-}
-
-/* ✅ aire extra debajo de los botones (antes del divider) */
-.story-hero{
-  padding-bottom:22px;
 }
 
 .story-photo{
@@ -62,6 +57,7 @@
   box-shadow:0 20px 60px rgba(0,0,0,.55);
   height:100%;
   max-height:620px;
+  align-self:stretch;
 }
 
 .story-photo img{
@@ -72,37 +68,33 @@
 }
 
 /* =========================
-   DIVIDER (entre hero y cards)
+   DIVIDER
 ========================= */
 
 .story-divider{
-  margin:44px 0 38px; /* ✅ más separación real */
+  margin:44px 0 38px;
 }
 
 /* =========================
-   01 / 02 / 03
+   01 / 02 / 03 CARDS
 ========================= */
 
 .story-cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
-  margin:0; /* controlamos el espacio con el divider y el lower */
+  margin-top:18px; /* separación real del hero */
 }
 
-/* =========================
-   STORY 01 / 02 / 03 CARDS
-========================= */
-
 .scard{
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 14px 40px rgba(0,0,0,.35);
   display:flex;
   flex-direction:column;
-  min-height: 220px;
+  min-height:220px;
 }
 
 .snum{
@@ -135,11 +127,7 @@
 }
 
 /* =========================
-   LOWER GRID (final layout)
-   - main = ancho cards 1+2
-   - what/outcomes = ancho card 3
-   - curious = debajo de main (ancho cards 1+2)
-   - outcomes NO ocupa 2 filas (adiós hueco gigante)
+   LOWER GRID
 ========================= */
 
 .story-lower{
@@ -154,7 +142,7 @@
   align-items:start;
 }
 
-/* AREAS */
+/* grid areas */
 .story-main{ grid-area:main; }
 .story-what{ grid-area:what; }
 .story-outcomes{ grid-area:outcomes; }
@@ -194,17 +182,19 @@
 
 .story-box li{ margin:8px 0; }
 
-/* CTA card: ✅ botón alineado con el texto (no abajo del todo) */
+/* CTA card alineada */
 .story-curious{
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start; /* ✅ */
-  gap:14px;                   /* ✅ */
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:18px;
 }
 
+.story-curious p{ margin:0; }
+
 .story-curious .btn{
-  align-self:flex-end; /* ✅ derecha */
-  margin-top:6px;      /* ✅ pegadito al texto */
+  justify-self:end;
+  align-self:center;
 }
 
 /* =========================
@@ -237,8 +227,12 @@
       "curious";
   }
 
+  .story-curious{
+    grid-template-columns:1fr;
+  }
+
   .story-curious .btn{
     width:100%;
-    align-self:stretch;
+    justify-self:stretch;
   }
 }
