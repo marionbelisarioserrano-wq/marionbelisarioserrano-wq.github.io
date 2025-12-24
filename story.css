@@ -187,7 +187,7 @@
   grid-template-columns: 1fr auto;
   align-items:center;
   gap:18px;
-  margin-top:-20px; /* ⬅️ SUBE SOLO ESTA CARD */
+  margin-top:-50px; /* ⬅️ SUBE SOLO ESTA CARD */
 }
 
 .story-curious p{ margin:0; }
