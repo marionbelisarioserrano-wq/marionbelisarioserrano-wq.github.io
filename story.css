@@ -19,9 +19,17 @@
   align-items:stretch;
 }
 
+/* ✅ para alinear la foto con el top del título
+   y el bottom con los botones */
+.story-hero-text{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
 .story-title{
   font-size:clamp(64px,6.5vw,104px);
-  line-height:.95; /* 👈 compacta el “to” */
+  line-height:.95; /* compacta */
   font-weight:850;
   letter-spacing:-.03em;
   margin:0 0 16px;
@@ -32,13 +40,16 @@
   font-size:1.14rem;
   line-height:1.65;
   color:rgba(255,255,255,.78);
-  margin-bottom:18px;
+  margin:0 0 18px;
 }
 
+/* ✅ los botones bajan al fondo del bloque de texto
+   para que el borde inferior “case” con la foto */
 .story-actions{
   display:flex;
   gap:18px;
-  margin-top:18px;
+  flex-wrap:wrap;     /* ✅ important para móvil */
+  margin-top:auto;    /* ✅ alinea con el bottom de la foto */
 }
 
 .story-photo{
@@ -74,6 +85,49 @@
   grid-template-columns:repeat(3,1fr);
   gap:18px;
   margin-bottom:36px;
+}
+
+/* =========================
+   STORY 01 / 02 / 03 CARDS
+========================= */
+
+.scard{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  display:flex;
+  flex-direction:column;
+  min-height: 220px;
+}
+
+.snum{
+  font-size:.85rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+  margin:0 0 10px;
+}
+
+.stitle{
+  font-size:1.08rem;
+  font-weight:700;
+  margin:0 0 8px;
+}
+
+.sdesc{
+  font-size:.98rem;
+  line-height:1.65;
+  color:rgba(255,255,255,.78);
+}
+
+.stags{
+  margin-top:auto;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.62);
+  font-size:.92rem;
 }
 
 /* =========================
@@ -126,15 +180,16 @@
   padding-left:18px;
 }
 
+/* CTA card */
 .story-curious{
   display:flex;
   flex-direction:column;
   justify-content:space-between;
 }
 
+/* ✅ botón a la derecha dentro de la card */
 .story-curious .btn{
-  align-self:flex-start;
-  margin-top:12px;
+  align-self:flex-end;
 }
 
 /* =========================
@@ -142,9 +197,18 @@
 ========================= */
 
 @media(max-width:980px){
+  .story-wrap{ padding:40px 18px 64px; }
+
   .story-hero{
     grid-template-columns:1fr;
     gap:22px;
+  }
+
+  /* en móvil no queremos el “push” al fondo */
+  .story-actions{ margin-top:18px; }
+
+  .story-photo{
+    max-height:520px;
   }
 
   .story-cards{
@@ -158,5 +222,10 @@
       "what"
       "outcomes"
       "curious";
+  }
+
+  .story-curious .btn{
+    width:100%;
+    align-self:stretch;
   }
 }
