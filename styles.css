@@ -420,6 +420,7 @@ nav a.active{
   display:block;
   object-fit: cover;
   object-position: center 22%;
+     margin: 0; /* <-- AÑADIR: quita el margen default del figure */
 }
 
 .story-caption{
@@ -490,7 +491,7 @@ nav a.active{
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 14px 40px rgba(0,0,0,0.35);
-   margin-bottom: 18px;
+   margin-bottom: 0;
 }
 
 .story-box h2{
@@ -647,35 +648,27 @@ nav a.active{
 ========================= */
 
 .story-lower{
-  margin-top: 18px;
+  margin-top: 28px; /* más separación respecto a las 01/02/03 */
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   gap: 18px;
   align-items: start;
+
+  grid-template-areas:
+    "main main"
+    ". side"
+    ". cta";
 }
 
 /* Columna izquierda */
-.story-main{
-  margin-top: 0;
-}
-
-/* Columna derecha */
-.story-side{
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.story-main{ grid-area: main; margin-top: 0; }
+.story-side{ grid-area: side; }
+.story-cta-wide{ grid-area: cta; width: 100%; }
 }
 
 /* Más aire entre bloques */
 .story-outcomes{
-  margin-top: 12px;
-}
-
-/* CTA alineado con My story */
-.story-cta-wide{
-  grid-column: 1;
-  width: 100%;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 /* Responsive */
@@ -683,6 +676,7 @@ nav a.active{
   .story-lower{
     grid-template-columns: 1fr;
   }
+   }
 
   .story-cta-wide{
     grid-column: auto;
