@@ -92,7 +92,8 @@ nav a.active{
   width:100%;
   height:1px;
   background: rgba(255,255,255,0.12);
-margin: 28px 0 48px;}
+  margin: 28px 0 48px;
+}
 
 /* =========================
    BUTTONS
@@ -136,6 +137,7 @@ margin: 28px 0 48px;}
 
 /* =========================
    HOME (index.html)
+   ⚠️ NO TOCADO
 ========================= */
 .hero{
   max-width:1280px;
@@ -405,8 +407,8 @@ margin: 28px 0 48px;}
   border: 1px solid var(--line);
   background: var(--chip);
   box-shadow: var(--shadow);
-  height: 100%;        /* ✅ se estira con el hero */
-  min-height: 520px;   /* ✅ evita “aplastado” */
+  height: 100%;
+  min-height: 520px;
   max-height: 620px;
   align-self: stretch;
 }
@@ -475,7 +477,6 @@ margin: 28px 0 48px;}
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 14px 40px rgba(0,0,0,0.35);
-  height: 100%; /* ✅ iguala altura dentro de grid */
 }
 
 .story-box h2{
@@ -501,19 +502,45 @@ margin: 28px 0 48px;}
 
 .story-box li{ margin: 8px 0; }
 
-/* ✅ LOWER: 4 cards same size */
+/* ✅ ✅ ✅ STORY LOWER (FIX REAL segun tus capturas)
+   - main = 2 columnas
+   - derecha = 1 columna (what / outcomes / cta) alineada con "Sustainable performance"
+*/
 .story-lower{
   margin-top: 18px;
   display:grid;
-  grid-template-columns: repeat(4, 1fr); /* ✅ 4 iguales */
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  align-items: stretch;
+  align-items: start;
+  grid-template-areas:
+    "main main side"
+    "main main side"
+    "main main side";
 }
 
-.story-cta{
+/* main ocupa 2 columnas */
+.story-main{ grid-area: main; }
+
+/* aside es la columna derecha completa */
+.story-side{ grid-area: side; display:flex; flex-direction:column; gap:18px; }
+
+/* en desktop, NO queremos 3 en fila: queremos 1 columna */
+.story-side-row{
   display:flex;
   flex-direction:column;
-  justify-content: space-between;
+  gap: 18px;
+}
+
+/* CTA como card bien montada */
+.story-cta{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  padding: 18px;
+
+  display:flex;
+  flex-direction:column;
   gap: 14px;
 }
 
@@ -527,6 +554,12 @@ margin: 28px 0 48px;}
   color: rgba(255,255,255,0.62);
   font-size: 0.98rem;
   margin: 0;
+}
+
+/* botón abajo y con presencia */
+.story-cta .btn{
+  margin-top: auto;
+  width: 100%;
 }
 
 /* =========================
@@ -586,9 +619,7 @@ margin: 28px 0 48px;}
     padding: 28px 18px 32px;
   }
 
-  .hero-image{
-    max-height: 520px;
-  }
+  .hero-image{ max-height: 520px; }
 
   .proof{
     margin: 14px auto 0; /* ✅ en móvil NO subir negativo */
@@ -620,8 +651,12 @@ margin: 28px 0 48px;}
 
   .story-cards{ grid-template-columns: 1fr; }
 
+  /* en móvil: todo apilado */
   .story-lower{
-    grid-template-columns: 1fr; /* ✅ stack */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "side";
   }
 
   .story-actions{ gap: 14px; }
