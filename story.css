@@ -130,8 +130,8 @@
    LOWER GRID
 ========================= */
 
-..story-lower{
-  margin-top:6px;   /* ⬅️ SUBE TODO EL BLOQUE */
+.story-lower{
+  margin-top:18px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   grid-template-areas:
@@ -184,9 +184,10 @@
 /* CTA card alineada */
 .story-curious{
   display:grid;
-  grid-template-columns:1fr auto;
+  grid-template-columns: 1fr auto;
   align-items:center;
   gap:18px;
+  margin-top:-12px; /* ⬅️ SUBE SOLO ESTA CARD */
 }
 
 .story-curious p{ margin:0; }
