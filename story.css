@@ -130,8 +130,8 @@
    LOWER GRID
 ========================= */
 
-.story-lower{
-  margin-top:18px;
+..story-lower{
+  margin-top:6px;   /* ⬅️ SUBE TODO EL BLOQUE */
   display:grid;
   grid-template-columns:repeat(3,1fr);
   grid-template-areas:
@@ -141,7 +141,6 @@
   gap:18px;
   align-items:start;
 }
-
 /* grid areas */
 .story-main{ grid-area:main; }
 .story-what{ grid-area:what; }
